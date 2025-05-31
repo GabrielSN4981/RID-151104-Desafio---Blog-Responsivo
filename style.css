@@ -1,0 +1,259 @@
+* {
+    font-family: "Montserrat", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+h3 {
+    font-size: 1.25rem;
+}
+
+h4 {
+    font-size: 0.875rem;
+}
+
+h5 {
+    font-size: 0.75rem;
+    color: #616161;
+}
+
+h6 {
+    font-size: 1rem;
+    color: #616161;
+}
+
+p {
+    font-size: 1rem;
+}
+
+@media (min-width:1025px) and (max-width: 1200px) {
+    h4 {
+        font-size: 0.75rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    h1 {
+        font-size: 1.75rem;
+    }
+
+    h6 {
+        font-size: 0.75rem;
+    }
+
+    p {
+        font-size: 0.875rem;
+    }
+}
+
+@media (max-width: 767px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1.25rem;
+    }
+
+    h3 {
+        font-size: 1rem;
+    }
+
+    h4 {
+        font-size: 0.75rem;
+    }
+
+    h6 {
+        font-size: 0.6875rem;
+    }
+
+    p {
+        font-size: 0.875rem;
+    }
+}
+
+:root {
+    --green: #02A28F;
+}
+
+header {
+    background-color: var(--green);
+    color: white;
+    padding: 1rem;
+    padding-left: 15%;
+}
+
+.container {
+    margin: 3rem 0;
+    display: flex;
+    padding: 0 10%;
+    gap: 2rem;
+}
+
+#main-content {
+    width: 100%;
+}
+
+#sidebar {
+    width: 50%;
+}
+
+#hero-content {
+    width: 100%;
+    background-image: url(assets/hero.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 50vh;
+    color: white;
+    border-radius: 0.625rem;
+    align-content: flex-end;
+    padding: 0 0 5% 5%;
+    box-shadow: inset 0 -100px 100px rgba(0, 0, 0, 0.7);
+}
+
+#mais-recentes-header {
+    margin: 2rem 0 1rem 0;
+    color: white;
+    width: 100%;
+    padding: 1rem 0;
+    background-color: var(--green);
+    border-radius: 0.625rem;
+}
+
+#mais-recentes-header-div {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-left: 5%;
+
+    & h4 {
+        font-weight: normal;
+        text-decoration: underline;
+        padding-left: 65%;
+    }
+}
+
+#cards {
+    display: grid;
+    grid-template-columns: 25vw 25vw;
+    gap: 2rem;
+}
+
+.cards {
+    background-color: white;
+    border-radius: 0.625rem;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+}
+
+.cards-texts {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+#sidebar-posts {
+    display: flex;
+    flex-direction: column;
+}
+
+#posts-populares {
+    color: white;
+    width: 100%;
+    padding: 1rem 0 1rem 2rem;
+    background-color: var(--green);
+    border-radius: 0.625rem;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.mini-cards {
+    width: 100%;
+    display: flex;
+    padding: 1rem;
+    border-radius: 0.625rem;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1);
+    margin: 1rem 0;
+}
+
+.mini-cards-texts {
+    margin-left: 1rem;
+}
+
+.mini-cards img {
+    width: 60%;
+    height: 60%;
+    border-radius: 0.625rem;
+}
+
+#categorias-header {
+    color: white;
+    width: 100%;
+    padding: 1rem 0 1rem 2rem;
+    background-color: var(--green);
+    border-radius: 0.625rem;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.categorias-texts-div {
+    display: flex;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+.numeros {
+    text-align: right;
+}
+
+footer {
+    background-color: var(--green);
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+@media (max-width: 1024px) {
+    .container {
+        flex-direction: column;
+    }
+
+    #main-content,
+    #sidebar {
+        width: 100%;
+    }
+}
+
+@media (min-width: 1025px) {
+    .cards-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    #cards {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+}
+
+@media (max-width: 767px) {
+    .cards-grid {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+@media (max-width: 599px) {
+    .cards-grid {
+        grid-template-columns: 1fr !important;
+    }
+}
